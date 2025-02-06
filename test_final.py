@@ -6,7 +6,7 @@ import time
 
 # Initialize session state variables if they don't exist
 if 'word_dict' not in st.session_state:
-    dict_path = os.path.join(os.path.dirname(__file__), "english_words_dictionary.txt")
+    dict_path = "english_words_dictionary.txt"
     with open(dict_path, encoding='utf-8') as f:
         data = f.read()
         st.session_state.word_dict = json.loads(data)
